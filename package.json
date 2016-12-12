@@ -1,6 +1,6 @@
 {
   "name": "fastrealpath",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Beta Release: Wrapper around fast C native realpath. Low startup time makes this great for build scripts.",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/reasonml/FastRealPath.git"
   },
   "bin": {
-    "realpath" : "./.bin/realpath"
+    "realpath": "./.bin/realpath"
   },
   "keywords": [
     "realpath"
