@@ -4,7 +4,7 @@
   "description": "Beta Release: Wrapper around fast C native realpath. Low startup time makes this great for build scripts.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "gcc -o ./.bin/realpath -x c - <<< $'#include<stdlib.h>\nmain(int cc, char**vargs){\n  puts(realpath(vargs[1], 0));\n}'",
+    "postinstall": "gcc -o ./.bin/realpath -x c ./realpath.c",
     "test": "echo \"No test\""
   },
   "repository": {
