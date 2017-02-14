@@ -4,13 +4,19 @@
   "description": "Beta Release: Wrapper around fast C native realpath. Low startup time makes this great for build scripts.",
   "main": "index.js",
   "scripts": {
-    "postinstall": "gcc -o ./.bin/realpath -x c ./realpath.c",
+    "postinstall": "if [ $esy__installing != '' ]; then exit 0; fi && gcc -o ./.bin/realpath -x c ./realpath.c",
     "test": "echo \"No test\""
+  },
+  "esy": {
+    "build": [
+      "gcc -o $cur__install/bin/realpath -x c ./realpath.c"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/reasonml/FastRealPath.git"
   },
+  "notes": " This .bin dir isn't even used by esy users - esy installs into build cache like a good package!",
   "bin": {
     "realpath": "./.bin/realpath"
   },
