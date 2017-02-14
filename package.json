@@ -1,6 +1,6 @@
 {
   "name": "fastrealpath",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Beta Release: Wrapper around fast C native realpath. Low startup time makes this great for build scripts.",
   "main": "index.js",
   "scripts": {
